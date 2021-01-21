@@ -9,7 +9,7 @@
  */
 
 // An welche Adresse sollen die Mails gesendet werden? bitte formal richtige adresse eintragen!!!!
-$zieladresse = 'koral-76@yandex.ru';
+$zieladresse = '';
 
 // Welche Adresse soll als Absender angegeben werden?
 // (Manche Hoster lassen diese Angabe vor dem Versenden der Mail ueberschreiben)
