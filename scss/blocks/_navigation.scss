@@ -1,0 +1,140 @@
+.navigation-wrapper {
+   @include size(90px);
+   align-items: center;
+   background-color: $blue-dark;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   margin-top: -10px;
+   margin-left: -10px;
+   transition: all .3s linear;
+
+   &:hover {
+       background-color: $blue;
+   }
+
+   @media screen and (max-width: $mobile-size) {
+       height: 70px;
+       width: 70px;
+   }
+}
+
+.navToggle {
+   height: 70px;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 80px;
+   z-index: 10;
+
+   @media screen and (max-width: $mobile-size) {
+       height: 60px;
+       width: 60px;
+   }
+}
+
+#navigation {
+   border-bottom: 2px solid transparent;
+   height: 0px;
+   left: 0;
+   overflow: hidden;
+   position: absolute;
+   top: 80px;
+   width: 70px;
+   z-index: 1;
+   transition: all 0.5s;
+
+   @media screen and (max-width: $mobile-size) {
+       left: -10px;
+       top: 70px;
+   }
+
+   & ul {
+       font-size: 13px;
+       font-weight: 400;
+       text-transform: uppercase;
+
+       @media screen and (max-width: $mobile-size) {
+           font-size: 12px;
+           text-align: center;
+       }
+   }
+
+   & li a {
+       color: $blue;
+       cursor: pointer;
+       display: flex;
+       flex-direction: column;
+       letter-spacing: 2px;
+       padding: 5px 0;
+       text-decoration: none;
+       transition: all 0.25s;
+
+       &.active {
+           color: $blue-light;
+       }
+   }
+
+   & li a:hover {
+       color: $blue-light;
+   }
+
+   &.active {
+       border-bottom: 2px solid $blue;
+       height: 165px;
+
+       @media screen and (max-width: $mobile-size) {
+           height: 155px;
+       }
+   }
+}
+
+/*Sandwich ------------------------------*/
+.sandwich {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 14px;
+    cursor: pointer;
+
+    &--active {
+        .sandwich__line {
+
+            &--top {
+                top: 6px;
+                transform: rotate(45deg);
+            }
+
+            &--middle {
+                opacity: 0;
+            }
+
+            &--bottom {
+                top: 6px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__line {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        background-color: $black;
+        transition: transform .3s linear;
+
+        &--top {
+            top: 0;
+        }
+
+        &--middle {
+            top: 7px;
+        }
+
+        &--bottom {
+            top: 14px;
+        }
+    }
+}

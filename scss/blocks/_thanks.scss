@@ -1,0 +1,21 @@
+.thanks {
+   &-information {
+       font-size: 20px;
+       font-weight: 400;
+       letter-spacing: 2px;
+
+       @media screen and (max-width: $phone-size) {
+           font-size: 18px;
+       }
+
+       address {
+           display: block;
+           font-style: normal;
+       }
+
+       a {
+           color: $blue-light;
+           font-style: normal;
+       }
+   }
+}

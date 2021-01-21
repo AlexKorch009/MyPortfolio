@@ -1,0 +1,50 @@
+.breadcrumbs {
+   margin-bottom: 15px;
+
+   &__item {
+       align-items: baseline;
+       display: inline-block;
+       font-size: 18px;
+       margin-bottom: 3px;
+       white-space: nowrap;
+
+       @media screen and (max-width: $content-size) {
+           font-size: 15px;
+       }
+
+       @media screen and (max-width: $tablet-size) {
+           font-size: 14px;
+       }
+
+       &::after {
+           color: $white;
+           content: "/\00a0";
+           margin: 0 10px;
+
+           @media screen and (max-width: $tablet-size) {
+               margin: 0 5px;
+           }
+       }
+
+       &:last-child {
+           &::after {
+               display: none;
+           }
+       }
+   }
+
+   &__link {
+       color: $blue;
+       font-style: italic;
+       font-weight: 400;
+       transition: all .3s linear;
+
+       &:hover {
+           color: $blue-light;
+       }
+
+       &.active {
+           color: $blue-light;
+       }
+   }
+}

@@ -1,0 +1,67 @@
+.rating {
+   align-items: center;
+   display: flex;
+   flex-direction: row-reverse;
+   height: auto;
+   justify-content: center;
+   margin: 20px 0;
+   text-align: center;
+   width: 100%;
+
+   @media screen and (max-width: $mobile-size) {
+       margin: 10px 0 20px;
+   }
+
+   &-input {
+       display: none;
+   }
+
+   &-label {
+       cursor: pointer;
+       display: block;
+       margin: 0 5px;
+       position: relative;
+       width: 50px;
+
+       @media screen and (max-width: $mobile-size) {
+           margin: 0;
+       }
+
+       &::before {
+           color: $gray-light;
+           content: '\f005';
+           display: block;
+           font-family: fontAwesome;
+           font-size: 50px;
+           position: relative;
+
+           @media screen and (max-width: $mobile-size) {
+               font-size: 35px;
+           }
+       }
+
+       &::after {
+           color: $blue;
+           content: '\f005';
+           display: block;
+           font-family: fontAwesome;
+           font-size: 50px;
+           left: 2px;
+           opacity: 0;
+           position: absolute;
+           text-shadow: 0 2px 5px rgba($black-blue, .5);
+           top: 0;
+           transition: opacity .3s linear;
+
+           @media screen and (max-width: $mobile-size) {
+               font-size: 35px;
+           }
+       }
+   }
+}
+
+.rating label:hover::after,
+.rating label:hover ~ label::after,
+.rating input:checked ~ label::after {
+   opacity: 1;
+}

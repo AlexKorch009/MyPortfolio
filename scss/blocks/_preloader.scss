@@ -1,0 +1,73 @@
+.preloader {
+    --duration: 1s;
+    align-items: center;
+    background-color: $black-blue;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    opacity: 0.5;
+    position: fixed;
+    transition: var(--duration);
+    width: 100%;
+    z-index: 10000;
+
+    &-content {
+        @include size(200px);
+        position: relative;
+    }
+
+    &-first,
+    &-second,
+    &-third {
+        animation: var(--duration) linear infinite;
+        border-radius: 50%;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    &-first {
+        border-bottom: 5px solid $red-light;
+        animation-name: first;
+    }
+
+    &-second {
+        border-right: 5px solid $yellow;
+        animation-name: second;
+    }
+
+    &-third {
+        border-top: 5px solid $blue-light;
+        animation-name: third;
+    }
+}
+
+@keyframes first {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes second {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes third {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}

@@ -1,0 +1,40 @@
+.footer {
+   bottom: 40px;
+   display: flex;
+   height: 50px;
+   justify-content: center;
+   margin-left: auto;
+   padding: 0 10px;
+   position: relative;
+   width: 410px;
+
+   @media screen and (max-width: $tablet-size) {
+       width: 230px;
+   }
+
+   @media screen and (max-width: $phone-size) {
+       width: 300px;
+   }
+
+   @media screen and (max-width: $mobile-size) {
+       width: 180px;
+   }
+
+   &-copyright {
+       height: auto;     
+       font-size: 18px;
+       font-weight: 200;
+       font-style: italic;
+       letter-spacing: 2px;
+       margin: auto 0 auto auto;
+       opacity: .5;
+
+       @media screen and (max-width: $content-size) {
+           font-size: 14px;
+       }
+
+       @media screen and (max-width: $tablet-size) {
+           font-size: 12px;
+       }
+   }
+}

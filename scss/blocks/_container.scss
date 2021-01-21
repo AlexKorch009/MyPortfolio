@@ -1,0 +1,32 @@
+.container {
+   background-color: $black;
+   height: 850px;
+   padding: 10px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0 auto;
+   width: 1320px;
+
+   @media screen and (max-width: $notebook-size) {
+       height: 600px;
+       width: 1000px;
+   }
+
+   @media screen and (max-width: $content-size) {
+       width: 960px;
+   }
+
+   @media screen and (max-width: $tablet-size) {
+       width: 700px;
+   }
+
+   @media screen and (max-width: $phone-size) {
+       width: 420px;
+   }
+
+   @media screen and (max-width: $mobile-size) {
+       width: 300px;
+   }
+}

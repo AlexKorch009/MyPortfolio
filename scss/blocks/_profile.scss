@@ -1,0 +1,39 @@
+.profile {
+   &-wrapper {
+       bottom: 0;
+       left: 0;
+       position: absolute;
+       z-index: 3;
+
+       @media screen and (max-width: $mobile-size) {
+           bottom: 35px;
+       }
+   }
+
+   &-nav {
+       display: flex;
+       flex-direction: column;
+       height: 525px;
+       justify-content: space-between;
+       text-align: center;
+
+       @media screen and (max-width: $notebook-size) {
+           height: 320px;
+       }
+
+       @media screen and (max-width: $tablet-size) {
+           height: auto;
+       }
+
+       &__item {
+           display: flex;
+           flex-direction: column;
+           height: auto;
+           width: 70px;
+
+           @media screen and (max-width: $mobile-size) {
+               width: 50px;
+           }
+       }
+   }
+}

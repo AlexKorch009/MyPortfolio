@@ -1,0 +1,88 @@
+/*Icons -------------------------------------*/
+.left {
+    &-icon {
+        @include size(50px);
+        left: 0;
+        position: absolute;
+        top: -9px;
+
+        @media screen and (max-width: $tablet-size) {
+            top: 0;
+        }
+    }
+}
+
+.icon {
+    @include size(30px);
+    cursor: pointer;
+    fill: $white;
+    margin: 10px 0;
+    transition: all 0.3s linear;
+
+    &.icon--color {
+        fill: $blue;
+    }
+
+    &--small {
+        @include size(20px);
+    }
+
+    &:hover {
+        fill: $blue;
+        transform: scale(1.2);
+    }
+
+    &-features {
+        @include size(80px);
+        fill: $blue;
+    }
+}
+
+/*Text ---------------------------------------------*/
+.text {
+    font-weight: 200;
+    line-height: 1.6;
+    opacity: 0.9;
+    padding-bottom: 5px;
+    text-align: justify;
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        list-style-type: disc;
+    }
+
+    &.text-center p {
+        font-weight: 200;
+        opacity: 0.6;
+        text-align: center;
+
+        &.active {
+            font-weight: 400;
+            opacity: 1;
+        }
+    }
+
+    &-link {
+        color: $white;
+        font-weight: 400;
+        text-decoration: underline;
+        transition: all 0.3s linear;
+
+        &:hover {
+            color: $blue-light;
+        }
+    }
+}
+
+/*Breakeline ------------------------------------------*/
+.breakeline {
+    background-color: $white;
+    display: flex;
+    height: 1px;
+    opacity: 0.5;
+    margin: 5px 0;
+    width: 100%;
+}
