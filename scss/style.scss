@@ -1,27 +1,27 @@
 /* Scss Document */
 
-/*Vars ----------------------------------------------*/
+/*Vars ---------------------*/
 @import "_vars"; 
 
-/*HTML ----------------------------------------------*/
+/*HTML ---------------------*/
 @import "_html"; 
 
-/*Preloader ------------------------------------*/
+/*Preloader ----------------*/
 @import "blocks/_preloader";
 
-/*Blocks --------------------------------------*/
+/*Blocks -------------------*/
 @import "blocks/_container";
 @import "blocks/_header";
 @import "blocks/_navigation";
-/*Profile-nav ----------------------------*/
+/*Profile-nav --------------*/
 @import "blocks/_profile";
-/*Icons -------------------------------------*/
-/*Text ---------------------------------------------*/
-/*Breakeline ------------------------------------------*/
+/*Icons --------------------*/
+/*Text ---------------------*/
+/*Breakeline ---------------*/
 @import "blocks/_helper";
-/*Photo -------------------------------*/
+/*Photo --------------------*/
 @import "blocks/_photo";
-/*Blocks -----------------------------*/
+/*Blocks -------------------*/
 @import "blocks/_social";
 @import "blocks/_wrapper";
 @import "blocks/_section";
@@ -31,7 +31,7 @@
 @import "blocks/_rating";
 @import "blocks/_footer";
 
-/*Pages ------------------------------------------------------------*/
+/*Pages --------------------*/
 @import "blocks/_home";
 @import "blocks/_about";
 @import "blocks/_resume";
@@ -41,5 +41,3 @@
 @import "blocks/_thanks";
 @import "blocks/_blog";
 @import "blocks/_features";
-
-/**/

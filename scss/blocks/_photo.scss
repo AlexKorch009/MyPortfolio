@@ -1,95 +1,86 @@
 .my-photo {
-   height: 950px;
-   position: relative;
-   width: 500px;
+  height: 950px;
+  position: relative;
+  width: 500px;
+  @media screen and (max-width: $notebook-size) {
+    height: 650px;
+    width: 330px;
+  }
+  @media screen and (max-width: $mobile-size) {
+    height: 450px;
+    width: 230px;
+  }
 
-   @media screen and (max-width: $notebook-size) {
-       height: 650px;
-       width: 330px;
-   }
+  &-wrapprer--show,
+  &-wrapprer--hide {
+    background-color: $gray;
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    width: 500px;
+    height: 950px;
+    top: -50px;
+    left: 90px;
+    @media screen and (max-width: $notebook-size) {
+      height: 650px;
+      top: -25px;
+      width: 330px;
+    }
+    @media screen and (max-width: $mobile-size) {
+      height: 450px;
+      left: 70px;
+      top: 0;
+      width: 230px;
+    }
+  }
 
-   @media screen and (max-width: $mobile-size) {
-       height: 450px;
-       width: 230px;
-   }
+  &-wrapprer--hide {
+    @media screen and (max-width: $notebook-size) {
+      display: none;
+    }
+  }
 
-   &-wrapprer--show,
-   &-wrapprer--hide {
-       background-color: $gray;
-       display: flex;
-       position: absolute;
-       z-index: 100;
-       width: 500px;
-       height: 950px;
-       top: -50px;
-       left: 90px;
+  &-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%;
+  }
 
-       @media screen and (max-width: $notebook-size) {
-           height: 650px;
-           top: -25px;
-           width: 330px;
-       }
+  &__name {
+    bottom: 18%;
+    font-size: 40px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    @media screen and (max-width: $notebook-size) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: $mobile-size) {
+      bottom: 0;
+      white-space: normal;
+    }
+  }
 
-       @media screen and (max-width: $mobile-size) {
-           height: 450px;
-           left: 70px;
-           top: 0;
-           width: 230px;
-       }
-   }
-
-   &-wrapprer--hide {
-
-       @media screen and (max-width: $notebook-size) {
-           display: none;
-       }
-   }
-
-   &-body {
-       display: flex;
-       flex-direction: column;
-       height: 100%;
-       position: relative;
-       width: 100%;
-   }
-
-   &__name {
-       bottom: 18%;
-       font-size: 40px;
-       left: 50%;
-       position: absolute;
-       transform: translateX(-50%);
-       white-space: nowrap;
-
-       @media screen and (max-width: $notebook-size) {
-           font-size: 32px;
-       }
-
-       @media screen and (max-width: $mobile-size) {
-           bottom: 0;
-           white-space: normal;
-       }
-   }
-
-   &__prof {
-       bottom: 13%;
-       color: $white;
-       cursor: pointer;
-       font-size: 16px;
-       font-weight: 700;
-       left: 50%;
-       letter-spacing: 3px;
-       position: absolute;
-       transform: translateX(-50%);
-       transition: all .3s linear;
-       white-space: nowrap;
-
-       &:hover {
-           color: $blue-dark;
-       }
-
-       @media screen and (max-width: $mobile-size) {
-           bottom: -30px;
-       }
-   }
+  &__prof {
+    bottom: 13%;
+    color: $white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    left: 50%;
+    letter-spacing: 3px;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all .3s linear;
+    white-space: nowrap;
+    &:hover {
+      color: $blue-dark;
+    }
+    @media screen and (max-width: $mobile-size) {
+      bottom: -30px;
+    }
+  }
 }

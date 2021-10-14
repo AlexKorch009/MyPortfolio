@@ -1,50 +1,47 @@
 .features {
-   &-wrapper {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       grid-template-rows: repeat(6, 1fr);
-       grid-gap: 30px;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 30px;
+    @media screen and (max-width: $phone-size) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      grid-gap: 20px;
+    }
+    @media screen and (max-width: $mobile-size) {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 20px;
+    }
+  }
 
-       @media screen and (max-width: $phone-size) {
-           grid-template-columns: repeat(2, 1fr);
-           grid-template-rows: repeat(9, 1fr);
-           grid-gap: 20px;
-       }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0 auto;
 
-       @media screen and (max-width: $mobile-size) {
-           grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-           grid-gap: 20px;
-       }
-   }
+    &__icon {
+      @include size(130px);
+      align-items: center;
+      background: $gray-light;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+      transition: all .3s linear;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
 
-   &-item {
-       display: flex;
-       flex-direction: column;
-       height: auto;
-       margin: 0 auto;
-
-       &__icon {
-           @include size(130px);
-           align-items: center;
-           background: $gray-light;
-           border-radius: 10px;
-           cursor: pointer;
-           display: flex;
-           justify-content: center;
-           margin: 10px auto;
-           transition: all .3s linear;
-
-           &:hover {
-               transform: scale(1.1);
-           }
-       }
-
-       &__descr {
-           font-size: 20px;
-           font-weight: 100;
-           letter-spacing: 2px;
-           margin-top: 10px;
-           text-align: center;
-       }
-   }
+    &__descr {
+      font-size: 20px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
 }

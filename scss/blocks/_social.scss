@@ -1,23 +1,20 @@
 .social {
-   &-block {
-       bottom: 7%;
-       height: auto;
-       left: 50%;
-       position: absolute;
-       transform: translateX(-50%);
-       width: 140px;
-
-       @media screen and (max-width: $content-size) {
-           bottom: 5%;
-       }
-
-       @media screen and (max-width: $mobile-size) {
-           bottom: -80px;
-       }
-
-       &__icons {
-           display: flex;
-           justify-content: space-between;
-       }
-   }
+  &-block {
+    bottom: 7%;
+    height: auto;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 140px;
+    @media screen and (max-width: $content-size) {
+      bottom: 5%;
+    }
+    @media screen and (max-width: $mobile-size) {
+      bottom: -80px;
+    }
+    &__icons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

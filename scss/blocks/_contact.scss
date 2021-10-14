@@ -1,168 +1,160 @@
 .contact {
-   &-map {
-       position: relative;
+  &-map {
+    position: relative;
 
-       &__wrapper {
-           margin: 30px 0;
-       }
+    &__wrapper {
+      margin: 30px 0;
+    }
 
-       &__place {
-           height: 450px;
-           width: 100%;
-       }
-   }
+    &__place {
+      height: 450px;
+      width: 100%;
+    }
+  }
 
-   &-info {
-       display: flex;
-       flex-direction: column;
-       height: auto;
-       width: auto;
+  &-info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    & > * {
+      margin: 10px 0;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
-       & > * {
-           margin: 10px 0;
+    &__box {
+      background: $black-blue;
+      border-radius: 4px;
+      box-shadow: 0 0 0 2px $black;
+      box-sizing: border-box;
+      cursor: pointer;
+      height: 60px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      &:hover {
+        &.contact-info__icon {
+          transform: scale(0);
+        }
 
-           &:first-child {
-               margin-top: 0;
-           }
+        &.contact-info__details {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
 
-           &:last-child {
-               margin-bottom: 0;
-           }
-       }
+    &__box:nth-child(2) {
+      .contact-info__details {
+        background: $blue-light;
+      }
+    }
 
-       &__box {
-           background: $black-blue;
-           border-radius: 4px;
-           box-shadow: 0 0 0 2px $black;
-           box-sizing: border-box;
-           cursor: pointer;
-           height: 60px;
-           overflow: hidden;
-           position: relative;
-           text-align: center;
-           width: 100%;
+    &__box:nth-child(3) {
+      .contact-info__details {
+        background: $gray-light;
+      }
+    }
 
+    &__icon {
+      background: $black-blue;
+      height: 100%;
+      transition: background .5s linear;
+      width: 100%;
 
-           & :hover {
-               &.contact-info__icon {
-                   transform: scale(0);
-               }
+      .fa {
+        color: $blue;
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
 
-               &.contact-info__details {
-                   opacity: 1;
-                   transform: scale(1);
-               }
-           }
-       }
+    &__details {
+      background: $blue;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transform: scale(2);
+      transition: transform .5s linear, opacity .5s linear;
+      width: 100%;
+    }
 
-       &__box:nth-child(2) {
-           .contact-info__details {
-               background: $blue-light;
-           }
-       }
+    &__title {
+      color: $white;
+      font-size: 24px;
+      line-height: 60px;
+    }
+  }
 
-       &__box:nth-child(3) {
-           .contact-info__details {
-               background: $gray-light;
-           }
-       }
+  &-message {
+    &__box {
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+    }
 
-       &__icon {
-           background: $black-blue;
-           height: 100%;
-           transition: background .5s linear;
-           width: 100%;
+    &__form {
+      padding-top: 30px;
+    }
 
-           .fa {
-               color: $blue;
-               font-size: 50px;
-               line-height: 60px;
-           }
-       }
+    &__input input {
+      background: transparent;
+      border: none;
+      border-bottom: 1.5px solid $white;
+      color: $white;
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+      outline: none;
+      padding: 10px 0;
+      position: relative;
+      transition: all .3s linear;
+      width: 100%;
+      &:focus {
+        border-bottom-color: $blue;
+      }
+    }
 
-       &__details {
-           background: $blue;
-           height: 100%;
-           left: 0;
-           opacity: 0;
-           position: absolute;
-           top: 0;
-           transform: scale(2);
-           transition: transform .5s linear, opacity .5s linear;
-           width: 100%;
-       }
+    &__textarea textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1.5px solid $white;
+      color: $white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+      outline: none;
+      padding: 10px 0;
+      position: relative;
+      width: 100%;
+      &:focus {
+        border-bottom-color: $blue;
+      }
+    }
 
-       &__title {
-           color: $white;
-           font-size: 24px;
-           line-height: 60px;
-       }
-   }
-
-   &-message {
-
-       &__box {
-           box-sizing: border-box;
-           position: relative;
-           width: 100%;
-       }
-
-       &__form {
-           padding-top: 30px;
-       }
-
-       &__input input {
-           background: transparent;
-           border: none;
-           border-bottom: 1.5px solid $white;
-           color: $white;
-           font-size: 16px;
-           letter-spacing: 1px;
-           margin-bottom: 30px;
-           outline: none;
-           padding: 10px 0;
-           position: relative;
-           transition: all .3s linear;
-           width: 100%;
-
-           &:focus {
-               border-bottom-color: $blue;
-           }
-       }
-
-       &__textarea textarea {
-           background: transparent;
-           border: none;
-           border-bottom: 1.5px solid $white;
-           color: $white;
-           font-family: 'Roboto', sans-serif;
-           font-size: 16px;
-           letter-spacing: 1px;
-           margin-bottom: 30px;
-           outline: none;
-           padding: 10px 0;
-           position: relative;
-           width: 100%;
-
-           &:focus {
-               border-bottom-color: $blue;
-           }
-       }
-
-       &__submit {
-           &#submit {
-               background: transparent;
-               border: none;
-               color: transparent;
-               cursor: pointer;
-               height: 100%;
-               left: 0;
-               outline: none;
-               padding: 0;
-               position: absolute;
-               top: 0;
-               width: 100%;
-           }
-       }
-   }
+    &__submit {
+      &#submit {
+        background: transparent;
+        border: none;
+        color: transparent;
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        outline: none;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
 }

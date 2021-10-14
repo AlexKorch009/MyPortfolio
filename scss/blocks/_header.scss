@@ -1,11 +1,10 @@
 .header {
-   display: flex;
-   height: 100%;
-   justify-content: center;
-   position: relative;
-   width: 80px;
-
-   @media screen and (max-width: $mobile-size) {
-       width: 60px;
-   }
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  @media screen and (max-width: $mobile-size) {
+    width: 60px;
+  }
 }

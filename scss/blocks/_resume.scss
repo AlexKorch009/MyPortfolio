@@ -1,13 +1,13 @@
 .resume {
-   &-period {
-       color: $blue;
-       font-size: 14px;
-       font-weight: 700;
-       margin: 10px 0 5px;
-   }
+  &-period {
+    color: $blue;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px 0 5px;
+  }
 
-   &-place {
-       opacity: .4;
-       margin-bottom: 15px;
-   }
+  &-place {
+    opacity: .4;
+    margin-bottom: 15px;
+  }
 }

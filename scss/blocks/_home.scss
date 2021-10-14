@@ -1,15 +1,13 @@
 .home-bg {
-   position: absolute;
-   right: 0;
-   top: 50%;
-   transform: translateY(-50%);
-
-   @media screen and (max-width: $notebook-size) {
-       height: 600px;
-       width: 600px;
-   }
-
-   @media screen and (max-width: $phone-size) {
-       display: none;
-   }
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  @media screen and (max-width: $notebook-size) {
+    height: 600px;
+    width: 600px;
+  }
+  @media screen and (max-width: $phone-size) {
+    display: none;
+  }
 }
