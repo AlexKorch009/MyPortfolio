@@ -1,14 +1,10 @@
 /* Scss Document */
-
 /*Vars ---------------------*/
 @import "_vars"; 
-
 /*HTML ---------------------*/
 @import "_html"; 
-
 /*Preloader ----------------*/
 @import "blocks/_preloader";
-
 /*Blocks -------------------*/
 @import "blocks/_container";
 @import "blocks/_header";
@@ -22,22 +18,21 @@
 /*Photo --------------------*/
 @import "blocks/_photo";
 /*Blocks -------------------*/
-@import "blocks/_social";
-@import "blocks/_wrapper";
-@import "blocks/_section";
 @import "blocks/_breadcrumbs";
 @import "blocks/_buttons";
+@import "blocks/_footer";
 @import "blocks/_progress";
 @import "blocks/_rating";
-@import "blocks/_footer";
-
+@import "blocks/_section";
+@import "blocks/_social";
+@import "blocks/_wrapper";
 /*Pages --------------------*/
-@import "blocks/_home";
 @import "blocks/_about";
-@import "blocks/_resume";
-@import "blocks/_works";
+@import "blocks/_blog";
 @import "blocks/_clock";
 @import "blocks/_contact";
-@import "blocks/_thanks";
-@import "blocks/_blog";
 @import "blocks/_features";
+@import "blocks/_home";
+@import "blocks/_resume";
+@import "blocks/_thanks";
+@import "blocks/_works";
